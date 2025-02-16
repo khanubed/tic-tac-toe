@@ -1,0 +1,207 @@
+body{
+    text-align: center;
+    background-color:#01012b ;
+    font-family: "parmanent marker" , cursive ;
+}
+h1{
+    font-size: 3rem;
+    color: #ffffff; /* Neon pink color */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    text-shadow: 
+        0 0 5px #05d9e8,
+        0 0 10px #05d9e8,
+        0 0 20px #05d9e8,
+        0 0 40px #05d9e8,
+        0 0 80px #05d9e8,
+        0 0 100px #05d9e8;
+}    
+#gameContainer{
+    display: flex;
+    justify-content: space-evenly;
+}    
+
+.boxContainer{
+    display: grid;
+    grid-template-columns: repeat(3,20vh);
+    grid-template-rows: repeat(3,20vh);
+    gap: 2vh;
+    text-align: center;
+
+
+}
+.box{
+    background-color: rgb(52, 255, 187);
+    border-radius: 2vh;
+    font-size: 10vh;
+    padding: 3vh;
+    text-align: center;
+    background-color: #005678;
+    color: #d1f7ff;
+}
+.box:hover{
+    
+    border-color: #ff00a0; /* Neon pink border on hover */
+    box-shadow: 
+        0 0 5px #ff00a0,
+        0 0 10px #ff00a0,
+        0 0 15px #ff00a0; /* Reduced intensity */
+    color: #ff00a0; /* Optional: Change text color to match the glow */
+    background: rgba(255, 0, 160, 0.05);
+}
+.neon-button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 5vh;
+    text-transform: uppercase;
+    background: none;
+    border: 3px solid #ff00a0; /* Neon pink border */
+    border-radius: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+    text-shadow: 
+        0 0 5px #ff00a0,
+        0 0 10px #ff00a0,
+        0 0 20px #ff00a0,
+        0 0 40px #ff00a0,
+        0 0 80px #ff00a0;
+
+}
+
+.neon-button:hover {
+    color: #ff00a0;
+    background: rgba(255, 0, 160, 0.2); /* Light neon pink background */
+    box-shadow: 
+        0 0 10px #ff00a0,
+        0 0 20px #ff00a0,
+        0 0 40px #ff00a0,
+        0 0 80px #ff00a0;
+}
+
+.neon-button:active {
+    transform: scale(0.95); /* Slight shrink effect when clicked */
+}
+
+h2{
+    font-size: 1.5rem;
+    color: #ffffff; /* Neon pink color */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    text-shadow: 
+    0 0 5px #05d9e8,
+    0 0 10px #05d9e8,
+    0 0 20px #05d9e8,
+    0 0 40px #05d9e8,
+    0 0 80px #05d9e8,
+    0 0 100px #05d9e8;
+
+}
+.profileContainer{
+    display: flex;
+    justify-content: space-evenly;
+    text-shadow: 
+        0 0 5px #ff00a0,
+        0 0 10px #ff00a0,
+        0 0 20px #ff00a0,
+        0 0 40px #ff00a0,
+        0 0 80px #ff00a0,
+        0 0 100px #ff00a0;
+    color: white;    
+
+
+}
+.picture{
+    height: 17vh;
+    width: 17vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    margin: 2rem;
+    border-color: #ff00a0;
+    border-width: 5px;
+}
+#picX{
+    background-image: url(assets/profile1.jfif);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 0.6);
+    transition: box-shadow 0.1s ease-in-out;
+
+}
+#picO{
+    background-image: url(assets/profile2.webp);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 0.6);
+    transition: box-shadow 0.1s ease-in-out;
+
+}
+
+@keyframes neon-glow {
+    0% {
+      box-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(0, 255, 255, 1), 0 0 80px rgba(0, 255, 255, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 40px rgba(0, 255, 255, 0.6);
+    }
+  }
+
+  .animate-glow {
+    animation: neon-glow 2s infinite;
+  }
+
+
+.gif{
+    margin-top: 10px;
+    height: 18vh;
+    width: 18vh;
+    background-size: cover;
+    background-position: center;
+    justify-self: center;
+}  
+@media (max-width:500px) {
+    #gameContainer{
+        flex-direction: column;
+
+    }
+    .boxContainer{
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+        gap: 2vw;
+        align-self: center;
+        justify-self: center;
+    }
+    h1{
+        font-size: 2em;
+    }
+    .box{
+        align-content: center;
+        font-size: 1.5em;
+    }
+    .picture{
+        height: 20vw;
+        width: 20vw;
+        margin-bottom: 1rem;
+    }
+    span{
+        font-size: smaller;
+
+    }
+    .gif{
+        height: 18vw;
+        width: 18vw;
+    }
+    h2{
+        font-size: medium;
+    }
+    .neon-button{
+        font-size: small;
+        margin-top: 10px;
+        
+    }
+}
